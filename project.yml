@@ -1,0 +1,24 @@
+name: Luggma
+options:
+  bundleIdPrefix: com.luggma
+targets:
+  Luggma:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: LuggmaApp
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.luggma.app
+        SWIFT_VERSION: 5.9
+        CODE_SIGN_STYLE: Automatic
+    info:
+      path: LuggmaApp/Info.plist
+      properties:
+        UILaunchScreen: { }
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIUserInterfaceStyle: Automatic
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
