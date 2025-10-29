@@ -184,6 +184,32 @@ export const NoteCard = memo(function NoteCard({ tone = 'info', body }) {
   );
 });
 
+export const TrainingCarousel = memo(function TrainingCarousel({ title, items = [], onAction }) {
+  return (
+    <article className="dsl-card training-carousel">
+      <header>
+        <h3>{title}</h3>
+      </header>
+      <div className="carousel-track">
+        {items.map((item) => (
+          <div key={item.id} className="training-item" onClick={() => onAction?.(item.action)}>
+            <img src={item.imageUrl} alt="" />
+            <div className="item-content">
+              <h4>{item.title}</h4>
+              <p>{item.subtitle}</p>
+              {typeof item.progressPercent === 'number' && (
+                <div className="progress-bar">
+                  <div style={{ width: `${item.progressPercent}%` }} />
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </article>
+  );
+});
+
 export function ComponentRenderer({ component, onAction }) {
   switch (component.type) {
     case 'summary-card':
@@ -223,6 +249,18 @@ export function ComponentRenderer({ component, onAction }) {
           onAction={(action) =>
             onAction?.({
               label: action.label ?? action.type ?? 'content-action',
+              action: action.action ?? action,
+            })
+          }
+        />
+      );
+    case 'training-carousel':
+      return (
+        <TrainingCarousel
+          {...component.props}
+          onAction={(action) =>
+            onAction?.({
+              label: action.label ?? action.type ?? 'training-action',
               action: action.action ?? action,
             })
           }
