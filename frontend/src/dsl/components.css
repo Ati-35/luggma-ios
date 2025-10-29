@@ -1,0 +1,148 @@
+.dsl-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 20px 55px -35px rgba(59, 130, 246, 0.6);
+  backdrop-filter: blur(16px);
+  color: #e2e8f0;
+}
+
+.dsl-card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.dsl-card h2,
+.dsl-card h3,
+.dsl-card h4 {
+  margin: 0;
+}
+
+.summary-card .badge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f172a;
+}
+
+.task-card ul,
+.content-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card li label {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.task-card input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  accent-color: #38bdf8;
+  margin-top: 3px;
+}
+
+.insight-card .metric {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.insight-card .metric .value {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.insight-card .metric .trend {
+  font-size: 0.85rem;
+}
+
+.insight-card .metric .trend.up {
+  color: #22c55e;
+}
+
+.insight-card .metric .trend.down {
+  color: #f87171;
+}
+
+.chart-card svg {
+  width: 100%;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.chart-x-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.cta-card .cta-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.cta-card button {
+  border-radius: 999px;
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-card button.primary {
+  background: linear-gradient(135deg, #22d3ee, #2563eb);
+  color: #0f172a;
+}
+
+.cta-card button.secondary {
+  background: rgba(148, 163, 184, 0.2);
+  color: #e2e8f0;
+}
+
+.cta-card button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px -20px rgba(148, 163, 184, 0.8);
+}
+
+.content-card ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.content-card button.ghost {
+  background: none;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 999px;
+  padding: 8px 14px;
+  color: #dbeafe;
+  cursor: pointer;
+}
+
+.note.info {
+  border-color: rgba(96, 165, 250, 0.5);
+  background: rgba(14, 116, 144, 0.2);
+}
+
+.note.warning {
+  border-color: rgba(249, 115, 22, 0.6);
+  background: rgba(180, 83, 9, 0.18);
+}

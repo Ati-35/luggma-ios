@@ -25,9 +25,19 @@
 - `05-tech-stack.md`
 - `06-project-structure.md`
 - `07-implementation.md`
+- `08-generative-ui-dsl.md`
 - `extras/`
   - `ADR/0001-stack.md`
   - `Observability/slo.md`
   - `QA/test-plan.md`
 
 Sürüm: 2025-10-27 06:26 UTC
+
+## Generative UI POC
+- `backend/`: Express tabanlı DSL üretici.  
+  - `cp backend/.env.example backend/.env` ile ortam değişkenlerini ayarla, `npm install` ve `npm run dev`.
+  - `POST /api/dsl` uç noktası JSON şemasına uygun koç panosu döndürür; guardrail olarak Zod validasyonu kullanır.
+- `frontend/`: Vite + React uygulaması.  
+  - `cp frontend/.env.example frontend/.env.local`, ardından `npm install` ve `npm run dev`.  
+  - `ComponentRenderer` DSL şemasındaki bileşenleri (summary-card, task-list, insight-chart, cta-card, note) render eder; aksiyonlar `/api/actions` üzerinden backend’e iletilir.
+- Opsiyonel: `backend/.env` içine `OPENAI_API_KEY` (ve gerekirse `OPENAI_MODEL`) eklenirse `/api/dsl` uç noktası sahte veriler yerine OpenAI’dan gelen JSON’u kullanır; doğrulama geçmezse otomatik mock’a düşer.
