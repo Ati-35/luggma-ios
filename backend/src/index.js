@@ -14,7 +14,6 @@ const ComponentTypeSchema = z.union([
   z.literal('cta-card'),
   z.literal('content-list'),
   z.literal('note'),
-  z.literal('training-carousel'),
 ]);
 
 const ActionSchema = z.object({
@@ -186,48 +185,6 @@ function buildMockDashboard(context, userPrompt) {
   if (ctaCard) {
     components.push(ctaCard);
   }
-
-  components.push({
-    type: 'training-carousel',
-    props: {
-      title: 'Eğitimler',
-      items: [
-        {
-          id: 'mindfulness-101',
-          title: 'Mindfulness Temelleri',
-          subtitle: 'Stres yönetimi ve odaklanma',
-          imageUrl: 'https://images.unsplash.com/photo-1599819444729-e818316a3a45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzOTc2fDB8MXxzZWFyY2h8NHx8bWVkaXRhdGlvbnxlbnwwfHx8fDE3MTQ0OTI4Mzh8MA&ixlib=rb-4.0.3&q=80&w=400',
-          progressPercent: 60,
-          action: {
-            type: 'open_training',
-            payload: { trainingId: 'mindfulness-101' },
-          },
-        },
-        {
-          id: 'breathing-mastery',
-          title: 'Nefes Teknikleri',
-          subtitle: 'Daha sakin ve enerjik hisset',
-          imageUrl: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzOTc2fDB8MXxzZWFyY2h8NXx8eW9nYXxlbnwwfHx8fDE3MTQ0OTI4NTd8MA&ixlib=rb-4.0.3&q=80&w=400',
-          progressPercent: 25,
-          action: {
-            type: 'open_training',
-            payload: { trainingId: 'breathing-mastery' },
-          },
-        },
-        {
-          id: 'craving-coping',
-          title: 'Arzuyla Başa Çıkma',
-          subtitle: 'Sigara isteğini yönet',
-          imageUrl: 'https://images.unsplash.com/photo-1516273873941-115343c8b746?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzOTc2fDB8MXxzZWFyY2h8MTJ8fHJhaW58ZW58MHx8fHwxNzE0NDkyODg2fDA&ixlib=rb-4.0.3&q=80&w=400',
-          progressPercent: 0,
-          action: {
-            type: 'open_training',
-            payload: { trainingId: 'craving-coping' },
-          },
-        },
-      ],
-    },
-  });
 
   if (userPrompt) {
     components.push({
