@@ -7,6 +7,8 @@ struct AppTabView: View {
                 .tabItem { Label("Ana", systemImage: "house.fill") }
             Lessons_HomeView()
                 .tabItem { Label("Dersler", systemImage: "book.fill") }
+            Trainings_HomeView()
+                .tabItem { Label("Eğitimler", systemImage: "graduationcap.fill") }
             SOS_HomeView()
                 .tabItem { Label("SOS", systemImage: "heart.text.square.fill") }
             Community_FeedView()
