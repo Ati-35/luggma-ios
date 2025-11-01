@@ -1,8 +1,63 @@
 import SwiftUI
 import UIKit
 
+final class LiveTheme: ObservableObject {
+    @Published var cardCorner: CGFloat = 16
+    @Published var headerHeight: CGFloat = 220
+
+    /// Component specific overrides keyed by inspector ID.
+    private var cornerOverrides: [String: CGFloat] = [:]
+    private var colorOverrides: [String: Color] = [:]
+
+    func cornerRadius(for componentID: String, default defaultValue: CGFloat? = nil) -> CGFloat {
+        if let override = cornerOverrides[componentID] {
+            return override
+        }
+        if let fallback = defaultValue {
+            return fallback
+        }
+        return cardCorner
+    }
+
+    func setCornerRadius(_ value: CGFloat, for componentID: String) {
+        guard cornerOverrides[componentID] != value else { return }
+        objectWillChange.send()
+        cornerOverrides[componentID] = value
+    }
+
+    func resetCornerRadius(for componentID: String) {
+        guard cornerOverrides.removeValue(forKey: componentID) != nil else { return }
+        objectWillChange.send()
+    }
+
+    func color(for componentID: String, default defaultValue: Color) -> Color {
+        colorOverrides[componentID] ?? defaultValue
+    }
+
+    func setColor(_ value: Color, for componentID: String) {
+        guard colorOverrides[componentID] != value else { return }
+        objectWillChange.send()
+        colorOverrides[componentID] = value
+    }
+
+    func resetColor(for componentID: String) {
+        guard colorOverrides.removeValue(forKey: componentID) != nil else { return }
+        objectWillChange.send()
+    }
+}
+
+private struct LiveThemeKey: EnvironmentKey {
+    static let defaultValue = LiveTheme()
+}
+
+extension EnvironmentValues {
+    var liveTheme: LiveTheme {
+        get { self[LiveThemeKey.self] }
+        set { self[LiveThemeKey.self] = newValue }
+    }
+}
+
 enum DS {
-    static let cornerRadius: CGFloat = 16
     static let spacing: CGFloat = 16
 }
 
@@ -25,9 +80,13 @@ struct GradientBackground: View {
 }
 
 struct HeroHeader: View {
+    @Environment(\.liveTheme) private var theme
     var title: String
     var subtitle: String
     var imageName: String?
+    private var cornerRadius: CGFloat {
+        theme.cornerRadius(for: "HERO_HEADER", default: theme.cardCorner)
+    }
 
     private func resolvedImage() -> Image? {
         guard let name = imageName, let uiImage = UIImage(named: name) else { return nil }
@@ -35,53 +94,24 @@ struct HeroHeader: View {
     }
 
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 28)
-                .fill(.ultraThinMaterial)
-                .background(
-                    LinearGradient(colors: [.mint.opacity(0.9), .blue.opacity(0.8)],
-                                   startPoint: .topLeading,
-                                   endPoint: .bottomTrailing)
-                        .overlay(Color.black.opacity(0.08))
-                )
-                .overlay(
-                    RoundedRectangle(cornerRadius: 28)
-                        .stroke(LinearGradient(colors: [.white.opacity(0.25), .white.opacity(0.05)],
-                                               startPoint: .topLeading,
-                                               endPoint: .bottomTrailing), lineWidth: 1)
-                )
-                .shadow(color: .black.opacity(0.25), radius: 20, x: 0, y: 16)
-                .padding(.horizontal)
-                .frame(height: 220)
-                .overlay(contentOverlay)
-        }
-    }
-
-    @ViewBuilder
-    private var contentOverlay: some View {
-        if let image = resolvedImage() {
-            image
-                .resizable()
-                .scaledToFill()
-                .frame(height: 220)
-                .clipped()
-                .clipShape(RoundedRectangle(cornerRadius: 28))
-        } else {
-            VStack(alignment: .leading, spacing: 8) {
-                Text(title)
-                    .font(.system(size: 34, weight: .bold, design: .rounded))
-                    .foregroundStyle(.white)
-                Text(subtitle)
-                    .font(.headline)
-                    .foregroundStyle(.white.opacity(0.85))
-            }
-            .padding()
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-        }
+        ZStack {}
+            .frame(height: theme.headerHeight)
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRadius)
+                    .stroke(
+                        LinearGradient(colors: [.white.opacity(0.25), .white.opacity(0.05)],
+                                       startPoint: .topLeading,
+                                       endPoint: .bottomTrailing),
+                        lineWidth: 1
+                    )
+            )
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+            .padding(.horizontal)
     }
 }
 
 struct GlassCard: View {
+    @Environment(\.liveTheme) private var theme
     var icon: String; var title: String; var subtitle: String
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -91,9 +121,9 @@ struct GlassCard: View {
         }
         .padding()
         .frame(maxWidth: .infinity, minHeight: 110, alignment: .leading)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: DS.cornerRadius))
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: theme.cardCorner))
         .overlay(
-            RoundedRectangle(cornerRadius: DS.cornerRadius)
+            RoundedRectangle(cornerRadius: theme.cardCorner)
                 .stroke(
                     LinearGradient(colors: [.mint.opacity(0.6), .blue.opacity(0.45)],
                                    startPoint: .topLeading,

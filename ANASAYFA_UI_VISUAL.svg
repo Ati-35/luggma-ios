@@ -1,0 +1,173 @@
+<svg width="420" height="900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Phone Frame -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F94077;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#FC9A3B;stop-opacity:1" />
+      <stop offset="45%" style="stop-color:#F5D48C;stop-opacity:1" />
+      <stop offset="65%" style="stop-color:#70DEBF;stop-opacity:1" />
+      <stop offset="85%" style="stop-color:#42BDDB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#58D6A0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5FD4C0;stop-opacity:0.65" />
+      <stop offset="100%" style="stop-color:#4299E1;stop-opacity:0.45" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Phone Body -->
+  <rect x="10" y="10" width="400" height="880" rx="40" ry="40" fill="#1a1a1a" stroke="#333" stroke-width="3"/>
+  
+  <!-- Screen Background -->
+  <rect x="20" y="20" width="380" height="860" rx="30" ry="30" fill="url(#bgGradient)"/>
+  
+  <!-- Status Bar -->
+  <rect x="20" y="20" width="380" height="44" rx="30" fill="rgba(0,0,0,0.3)"/>
+  <text x="40" y="45" font-family="Arial" font-size="12" fill="white">9:41</text>
+  <text x="360" y="45" font-family="Arial" font-size="12" fill="white">🔋</text>
+  
+  <!-- Content Area Label -->
+  <text x="210" y="85" font-family="Arial" font-size="10" fill="white" text-anchor="middle" opacity="0.7">▼ SCROLLABLE CONTENT ▼</text>
+  
+  <!-- 1. HERO HEADER -->
+  <g id="heroHeader">
+    <rect x="36" y="95" width="348" height="200" rx="16" fill="rgba(255,255,255,0.05)" stroke="url(#cardGradient)" stroke-width="2" filter="url(#glow)"/>
+    <text x="210" y="180" font-family="Arial" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Merhaba!</text>
+    <text x="210" y="205" font-family="Arial" font-size="13" fill="white" text-anchor="middle">Bugün duman yok FENAYIZ 💪</text>
+    <text x="42" y="110" font-family="Arial" font-size="9" fill="#FFD700" font-weight="bold">HERO HEADER (220pt)</text>
+  </g>
+  
+  <!-- 2. GLASS CARDS -->
+  <g id="glassCards">
+    <!-- Container Border -->
+    <rect x="36" y="310" width="348" height="140" rx="24" fill="none" stroke="url(#cardGradient)" stroke-width="1.5" opacity="0.5"/>
+    
+    <!-- Glass Card 1 -->
+    <rect x="48" y="322" width="160" height="116" rx="16" fill="rgba(255,255,255,0.1)" stroke="url(#cardGradient)" stroke-width="1.5"/>
+    <text x="60" y="345" font-size="28">▶</text>
+    <text x="60" y="373" font-family="Arial" font-size="14" font-weight="bold" fill="white">Devam Et</text>
+    <text x="60" y="390" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.7)">Son ders</text>
+    
+    <!-- Glass Card 2 -->
+    <rect x="212" y="322" width="160" height="116" rx="16" fill="rgba(255,255,255,0.1)" stroke="url(#cardGradient)" stroke-width="1.5"/>
+    <text x="224" y="345" font-size="28">❤️</text>
+    <text x="224" y="373" font-family="Arial" font-size="14" font-weight="bold" fill="white">SOS</text>
+    <text x="224" y="390" font-family="Arial" font-size="11" fill="rgba(255,255,255,0.7)">Kriz anı yardımı</text>
+    
+    <text x="42" y="325" font-family="Arial" font-size="9" fill="#FFD700" font-weight="bold">GLASS CARDS (110pt min)</text>
+  </g>
+  
+  <!-- 3. GÖREVLER SECTION -->
+  <g id="tasksSection">
+    <text x="48" y="480" font-family="Arial" font-size="16" font-weight="bold" fill="white">GÖREVLER</text>
+    
+    <!-- Task Row 1 -->
+    <rect x="36" y="490" width="348" height="50" rx="16" fill="rgba(255,255,255,0.05)" stroke="url(#cardGradient)" stroke-width="1.5"/>
+    <circle cx="56" cy="515" r="10" fill="none" stroke="white" stroke-width="2"/>
+    <circle cx="82" cy="515" r="14" fill="rgba(95,212,192,0.3)"/>
+    <text x="78" y="520" font-size="18">💨</text>
+    <text x="105" y="520" font-family="Arial" font-size="13" fill="white">5 dk nefes egzersizi</text>
+    
+    <!-- Task Row 2 -->
+    <rect x="36" y="545" width="348" height="50" rx="16" fill="rgba(255,255,255,0.05)" stroke="url(#cardGradient)" stroke-width="1.5"/>
+    <circle cx="56" cy="570" r="10" fill="none" stroke="white" stroke-width="2"/>
+    <circle cx="82" cy="570" r="14" fill="rgba(95,212,192,0.3)"/>
+    <text x="78" y="575" font-size="18">▶</text>
+    <text x="105" y="575" font-family="Arial" font-size="13" fill="white">'Tetikleyiciler' videosunu izle</text>
+    
+    <!-- Task Row 3 -->
+    <rect x="36" y="600" width="348" height="50" rx="16" fill="rgba(255,255,255,0.05)" stroke="url(#cardGradient)" stroke-width="1.5"/>
+    <circle cx="56" cy="625" r="10" fill="none" stroke="white" stroke-width="2"/>
+    <circle cx="82" cy="625" r="14" fill="rgba(95,212,192,0.3)"/>
+    <text x="78" y="630" font-size="18">⚠️</text>
+    <text x="105" y="630" font-family="Arial" font-size="13" fill="white">Bugün İçin Böyle Dikkat Edelim</text>
+    
+    <text x="42" y="493" font-family="Arial" font-size="9" fill="#FFD700" font-weight="bold">TASK ROWS</text>
+  </g>
+  
+  <!-- 4. MOTİVASYON SECTION -->
+  <g id="motivationSection">
+    <text x="48" y="675" font-family="Arial" font-size="16" font-weight="bold" fill="white">MOTİVASYON</text>
+    
+    <!-- Task Row 4 -->
+    <rect x="36" y="685" width="348" height="45" rx="16" fill="rgba(255,255,255,0.05)" stroke="url(#cardGradient)" stroke-width="1.5"/>
+    <circle cx="56" cy="707" r="10" fill="none" stroke="white" stroke-width="2"/>
+    <text x="85" y="713" font-family="Arial" font-size="12" fill="white">💬 Toplulukta paylaşım yap</text>
+    
+    <!-- Task Row 5 -->
+    <rect x="36" y="735" width="348" height="45" rx="16" fill="rgba(255,255,255,0.05)" stroke="url(#cardGradient)" stroke-width="1.5"/>
+    <circle cx="56" cy="757" r="10" fill="none" stroke="white" stroke-width="2"/>
+    <text x="85" y="763" font-family="Arial" font-size="12" fill="white">📖 Koç notlarını oku</text>
+  </g>
+  
+  <!-- 5. VIDEO SECTION (Partial - would extend below) -->
+  <g id="videoSection">
+    <text x="48" y="805" font-family="Arial" font-size="16" font-weight="bold" fill="white">VIDEO</text>
+    <rect x="52" y="815" width="316" height="30" rx="28" fill="rgba(255,100,150,0.4)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <text x="210" y="835" font-family="Arial" font-size="11" fill="white" text-anchor="middle">🫁 Nefes Tekniği - 4-7-8 metodu</text>
+    <text x="42" y="818" font-family="Arial" font-size="9" fill="#FFD700" font-weight="bold">VIDEO CAROUSEL</text>
+  </g>
+  
+  <!-- Tab Bar -->
+  <rect x="20" y="780" width="380" height="80" rx="0" fill="rgba(0,0,0,0.6)"/>
+  <line x1="20" y1="780" x2="400" y2="780" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  
+  <g id="tabBar">
+    <!-- Tab 1 - Ana (Active) -->
+    <g transform="translate(45, 800)">
+      <text x="0" y="0" font-size="24" text-anchor="middle">🏠</text>
+      <text x="0" y="20" font-family="Arial" font-size="10" fill="#42BDDB" text-anchor="middle" font-weight="bold">Ana</text>
+    </g>
+    
+    <!-- Tab 2 - Dersler -->
+    <g transform="translate(108, 800)">
+      <text x="0" y="0" font-size="24" text-anchor="middle" opacity="0.5">📖</text>
+      <text x="0" y="20" font-family="Arial" font-size="10" fill="white" text-anchor="middle" opacity="0.5">Dersler</text>
+    </g>
+    
+    <!-- Tab 3 - SOS -->
+    <g transform="translate(171, 800)">
+      <text x="0" y="0" font-size="24" text-anchor="middle" opacity="0.5">❤️‍🩹</text>
+      <text x="0" y="20" font-family="Arial" font-size="10" fill="white" text-anchor="middle" opacity="0.5">SOS</text>
+    </g>
+    
+    <!-- Tab 4 - Topluluk -->
+    <g transform="translate(234, 800)">
+      <text x="0" y="0" font-size="24" text-anchor="middle" opacity="0.5">👥</text>
+      <text x="0" y="20" font-family="Arial" font-size="10" fill="white" text-anchor="middle" opacity="0.5">Topluluk</text>
+    </g>
+    
+    <!-- Tab 5 - Mağaza -->
+    <g transform="translate(297, 800)">
+      <text x="0" y="0" font-size="24" text-anchor="middle" opacity="0.5">🛍️</text>
+      <text x="0" y="20" font-family="Arial" font-size="10" fill="white" text-anchor="middle" opacity="0.5">Mağaza</text>
+    </g>
+    
+    <!-- Tab 6 - Profil -->
+    <g transform="translate(360, 800)">
+      <text x="0" y="0" font-size="24" text-anchor="middle" opacity="0.5">👤</text>
+      <text x="0" y="20" font-family="Arial" font-size="10" fill="white" text-anchor="middle" opacity="0.5">Profil</text>
+    </g>
+  </g>
+  
+  <!-- Home Indicator -->
+  <rect x="170" y="860" width="80" height="5" rx="2.5" fill="rgba(255,255,255,0.3)"/>
+  
+  <!-- Annotations -->
+  <text x="210" y="55" font-family="Arial" font-size="8" fill="rgba(255,255,255,0.5)" text-anchor="middle">Status Bar (44pt)</text>
+  <text x="210" y="875" font-family="Arial" font-size="8" fill="rgba(255,255,255,0.5)" text-anchor="middle">Tab Bar (83pt) + Home Indicator (34pt)</text>
+  
+  <!-- Side Annotations -->
+  <line x1="5" y1="95" x2="5" y2="780" stroke="#FFD700" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="8" y="440" font-family="Arial" font-size="9" fill="#FFD700" font-weight="bold" writing-mode="tb">CONTENT AREA (Scrollable)</text>
+  
+</svg>
+
+

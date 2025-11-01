@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUGGMA Anasayfa - İnteraktif UI Şeması</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .layout {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .phone-container {
+            position: relative;
+        }
+        
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background: #1a1a1a;
+            border-radius: 40px;
+            padding: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, 
+                #F94077 0%, 
+                #FC9A3B 25%, 
+                #F5D48C 45%, 
+                #70DEBF 65%, 
+                #42BDDB 85%, 
+                #58D6A0 100%);
+        }
+        
+        .phone-content {
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            scrollbar-width: none;
+        }
+        
+        .phone-content::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Status Bar */
+        .status-bar {
+            height: 44px;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 14px;
+        }
+        
+        /* Content */
+        .content {
+            padding: 24px 16px 100px 16px;
+        }
+        
+        /* Hero Header */
+        .hero-header {
+            height: 220px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid;
+            border-image: linear-gradient(135deg, rgba(95,212,192,0.65), rgba(66,153,225,0.45)) 1;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(66,153,225,0.3);
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+        }
+        
+        .hero-header:hover {
+            transform: scale(1.02);
+        }
+        
+        .hero-header h2 {
+            font-size: 32px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .hero-header p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .label {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: rgba(255,215,0,0.9);
+            color: #1a1a1a;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        
+        /* Glass Cards Container */
+        .glass-container {
+            border: 2px solid;
+            border-image: linear-gradient(135deg, rgba(95,212,192,0.65), rgba(66,153,225,0.45)) 1;
+            border-radius: 24px;
+            padding: 12px 16px;
+            margin-bottom: 24px;
+            position: relative;
+        }
+        
+        .glass-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .glass-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border: 1.5px solid;
+            border-image: linear-gradient(135deg, rgba(95,212,192,0.6), rgba(66,153,225,0.45)) 1;
+            border-radius: 16px;
+            padding: 16px;
+            min-height: 110px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(66,153,225,0.4);
+        }
+        
+        .glass-card .icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        
+        .glass-card .title {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 4px;
+        }
+        
+        .glass-card .subtitle {
+            font-size: 12px;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Section Header */
+        .section-header {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            margin: 24px 0 16px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Task Row */
+        .task-row {
+            background: rgba(255,255,255,0.05);
+            border: 1.5px solid;
+            border-image: linear-gradient(135deg, rgba(95,212,192,0.6), rgba(66,153,225,0.45)) 1;
+            border-radius: 16px;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .task-row:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateX(5px);
+        }
+        
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            border-radius: 50%;
+            flex-shrink: 0;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .task-row.done .checkbox {
+            background: rgba(95,212,192,0.8);
+            border-color: rgba(95,212,192,0.8);
+        }
+        
+        .task-row.done .checkbox::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .task-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, rgba(95,212,192,0.8), rgba(66,153,225,0.6));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .task-title {
+            color: white;
+            font-size: 14px;
+            flex-grow: 1;
+        }
+        
+        /* Video Section */
+        .video-carousel {
+            position: relative;
+            height: 180px;
+            border-radius: 28px;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+        
+        .video-card {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 28px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        
+        .video-card.active {
+            opacity: 1;
+        }
+        
+        .video-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .video-header {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        
+        .video-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+        
+        .video-info .video-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 4px;
+        }
+        
+        .video-info .video-subtitle {
+            font-size: 14px;
+            color: rgba(255,255,255,0.85);
+        }
+        
+        .video-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            align-self: flex-start;
+        }
+        
+        .video-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .dot.active {
+            background: white;
+            width: 24px;
+            border-radius: 4px;
+        }
+        
+        /* Tab Bar */
+        .tab-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 83px;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+        
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            opacity: 0.5;
+        }
+        
+        .tab-item.active {
+            opacity: 1;
+        }
+        
+        .tab-item:hover {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        
+        .tab-icon {
+            font-size: 24px;
+        }
+        
+        .tab-label {
+            font-size: 10px;
+            color: white;
+        }
+        
+        .tab-item.active .tab-label {
+            color: #42BDDB;
+            font-weight: bold;
+        }
+        
+        /* Info Panel */
+        .info-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+        }
+        
+        .info-panel h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .info-panel h4 {
+            color: #764ba2;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+        
+        .info-item {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .info-item strong {
+            color: #764ba2;
+        }
+        
+        .info-item code {
+            background: #e2e8f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .color-swatch {
+            height: 60px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 8px;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+            white-space: nowrap;
+        }
+        
+        .has-tooltip:hover .tooltip {
+            opacity: 1;
+        }
+        
+        @media (max-width: 1200px) {
+            .layout {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 LUGGMA Anasayfa - İnteraktif UI Şeması</h1>
+        
+        <div class="layout">
+            <!-- Phone Mockup -->
+            <div class="phone-container">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <div class="status-bar">
+                            <span>9:41</span>
+                            <span>🔋 100%</span>
+                        </div>
+                        
+                        <div class="phone-content">
+                            <div class="content">
+                                <!-- Hero Header -->
+                                <div class="hero-header has-tooltip">
+                                    <span class="label">HERO HEADER</span>
+                                    <h2>Merhaba!</h2>
+                                    <p>Bugün duman yok FENAYIZ 💪</p>
+                                    <div class="tooltip">220pt yükseklik • 16pt corner radius • Gradient border</div>
+                                </div>
+                                
+                                <!-- Glass Cards -->
+                                <div class="glass-container">
+                                    <span class="label">GLASS CARDS</span>
+                                    <div class="glass-cards">
+                                        <div class="glass-card has-tooltip" onclick="alert('Derslere yönlendirme')">
+                                            <div class="icon">▶</div>
+                                            <div class="title">Devam Et</div>
+                                            <div class="subtitle">Son ders</div>
+                                            <div class="tooltip">play.circle.fill • Min 110pt • Glassmorphism</div>
+                                        </div>
+                                        <div class="glass-card has-tooltip" onclick="alert('SOS ekranına yönlendirme')">
+                                            <div class="icon">❤️</div>
+                                            <div class="title">SOS</div>
+                                            <div class="subtitle">Kriz anı yardımı</div>
+                                            <div class="tooltip">heart.text.square.fill • Tap → SOS_HomeView</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Görevler -->
+                                <div class="section-header">GÖREVLER</div>
+                                <div class="task-row has-tooltip" onclick="this.classList.toggle('done')">
+                                    <div class="checkbox"></div>
+                                    <div class="task-icon">💨</div>
+                                    <div class="task-title">5 dk nefes egzersizi</div>
+                                    <div class="tooltip">Tıkla → Checkbox toggle • Spring animasyonu</div>
+                                </div>
+                                <div class="task-row has-tooltip" onclick="this.classList.toggle('done')">
+                                    <div class="checkbox"></div>
+                                    <div class="task-icon">▶</div>
+                                    <div class="task-title">'Tetikleyiciler' videosunu izle</div>
+                                    <div class="tooltip">AnimatedCheckmark component • Gradient icon bg</div>
+                                </div>
+                                <div class="task-row has-tooltip" onclick="this.classList.toggle('done')">
+                                    <div class="checkbox"></div>
+                                    <div class="task-icon">⚠️</div>
+                                    <div class="task-title">Bugün İçin Böyle Dikkat Edelim</div>
+                                    <div class="tooltip">16pt padding • 1.5pt border • Mint→Blue gradient</div>
+                                </div>
+                                
+                                <!-- Motivasyon -->
+                                <div class="section-header">MOTİVASYON</div>
+                                <div class="task-row" onclick="this.classList.toggle('done')">
+                                    <div class="checkbox"></div>
+                                    <div class="task-icon">💬</div>
+                                    <div class="task-title">Toplulukta paylaşım yap</div>
+                                </div>
+                                <div class="task-row" onclick="this.classList.toggle('done')">
+                                    <div class="checkbox"></div>
+                                    <div class="task-icon">📖</div>
+                                    <div class="task-title">Koç notlarını oku</div>
+                                </div>
+                                <div class="task-row" onclick="this.classList.toggle('done')">
+                                    <div class="checkbox"></div>
+                                    <div class="task-icon">💧</div>
+                                    <div class="task-title">Su içmeyi unutma</div>
+                                </div>
+                                
+                                <!-- Video Section -->
+                                <div class="section-header">VIDEO <span style="font-size: 12px; opacity: 0.7;">(4 saniyede otomatik değişir)</span></div>
+                                <div class="video-carousel has-tooltip">
+                                    <div class="video-card active" style="background: linear-gradient(135deg, rgba(249,64,119,0.8), rgba(252,154,59,0.7));">
+                                        <div class="video-header">
+                                            <div class="video-icon">🫁</div>
+                                            <div class="video-info">
+                                                <div class="video-title">Nefes Tekniği</div>
+                                                <div class="video-subtitle">4-7-8 metodunu uygulayalım</div>
+                                            </div>
+                                        </div>
+                                        <div class="video-cta">
+                                            <span>▶</span>
+                                            <span>İzlemeye başla</span>
+                                        </div>
+                                    </div>
+                                    <div class="video-card" style="background: linear-gradient(135deg, rgba(159,122,234,0.7), rgba(99,102,241,0.8));">
+                                        <div class="video-header">
+                                            <div class="video-icon">⚡</div>
+                                            <div class="video-info">
+                                                <div class="video-title">Kriz Anı</div>
+                                                <div class="video-subtitle">Koçtan hızlı destek ipuçları</div>
+                                            </div>
+                                        </div>
+                                        <div class="video-cta">
+                                            <span>▶</span>
+                                            <span>İzlemeye başla</span>
+                                        </div>
+                                    </div>
+                                    <div class="video-card" style="background: linear-gradient(135deg, rgba(95,212,192,0.7), rgba(66,153,225,0.8));">
+                                        <div class="video-header">
+                                            <div class="video-icon">🏃</div>
+                                            <div class="video-info">
+                                                <div class="video-title">Hareket Molası</div>
+                                                <div class="video-subtitle">3 dakikalık esneme rutini</div>
+                                            </div>
+                                        </div>
+                                        <div class="video-cta">
+                                            <span>▶</span>
+                                            <span>İzlemeye başla</span>
+                                        </div>
+                                    </div>
+                                    <div class="video-dots">
+                                        <div class="dot active"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                    </div>
+                                    <div class="tooltip">TabView • 180pt height • 28pt radius • Auto-scroll timer</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Tab Bar -->
+                        <div class="tab-bar">
+                            <div class="tab-item active">
+                                <div class="tab-icon">🏠</div>
+                                <div class="tab-label">Ana</div>
+                            </div>
+                            <div class="tab-item">
+                                <div class="tab-icon">📖</div>
+                                <div class="tab-label">Dersler</div>
+                            </div>
+                            <div class="tab-item">
+                                <div class="tab-icon">❤️‍🩹</div>
+                                <div class="tab-label">SOS</div>
+                            </div>
+                            <div class="tab-item">
+                                <div class="tab-icon">👥</div>
+                                <div class="tab-label">Topluluk</div>
+                            </div>
+                            <div class="tab-item">
+                                <div class="tab-icon">🛍️</div>
+                                <div class="tab-label">Mağaza</div>
+                            </div>
+                            <div class="tab-item">
+                                <div class="tab-icon">👤</div>
+                                <div class="tab-label">Profil</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Info Panel -->
+            <div class="info-panel">
+                <h3>📐 Teknik Detaylar</h3>
+                
+                <h4>🎨 Renk Paleti</h4>
+                <div class="color-palette">
+                    <div class="color-swatch" style="background: #F94077;">#F94077</div>
+                    <div class="color-swatch" style="background: #FC9A3B;">#FC9A3B</div>
+                    <div class="color-swatch" style="background: #F5D48C; color: #333;">#F5D48C</div>
+                    <div class="color-swatch" style="background: #70DEBF;">#70DEBF</div>
+                    <div class="color-swatch" style="background: #42BDDB;">#42BDDB</div>
+                    <div class="color-swatch" style="background: #58D6A0;">#58D6A0</div>
+                </div>
+                
+                <h4>📏 Ölçüler</h4>
+                <div class="info-item">
+                    <strong>Ekran:</strong> 375 x 812 pt (iPhone Standard)
+                </div>
+                <div class="info-item">
+                    <strong>Status Bar:</strong> 44pt
+                </div>
+                <div class="info-item">
+                    <strong>Tab Bar:</strong> 83pt
+                </div>
+                <div class="info-item">
+                    <strong>Safe Area Bottom:</strong> 117pt (Tab + Home Indicator)
+                </div>
+                <div class="info-item">
+                    <strong>Hero Header:</strong> 220pt yükseklik
+                </div>
+                <div class="info-item">
+                    <strong>Glass Cards:</strong> Min 110pt yükseklik
+                </div>
+                <div class="info-item">
+                    <strong>Video Cards:</strong> 180pt yükseklik
+                </div>
+                
+                <h4>🔧 Component Detayları</h4>
+                <div class="info-item">
+                    <strong>Corner Radius:</strong> 16pt (cards), 28pt (video)
+                </div>
+                <div class="info-item">
+                    <strong>Spacing:</strong> 24pt (sections), 12pt (elements)
+                </div>
+                <div class="info-item">
+                    <strong>Padding:</strong> 16pt (yatay), 22pt (video içerik)
+                </div>
+                <div class="info-item">
+                    <strong>Material:</strong> <code>.ultraThinMaterial</code> (iOS glassmorphism)
+                </div>
+                <div class="info-item">
+                    <strong>Border:</strong> Gradient (mint→blue), 1.2-1.5pt
+                </div>
+                
+                <h4>📂 Dosya Konumları</h4>
+                <div class="info-item">
+                    <strong>Ana View:</strong> <code>LuggmaApp/HomeView.swift</code> (1-204)
+                </div>
+                <div class="info-item">
+                    <strong>Theme:</strong> <code>LuggmaApp/DesignSystem/Theme.swift</code>
+                </div>
+                <div class="info-item">
+                    <strong>Components:</strong>
+                    <ul style="margin-top: 8px; margin-left: 20px;">
+                        <li>HeroHeader (Theme.swift: 82-111)</li>
+                        <li>GlassCard (Theme.swift: 113-137)</li>
+                        <li>TaskRow (HomeView.swift: 72-110)</li>
+                        <li>VideoSectionView (HomeView.swift: 112-139)</li>
+                    </ul>
+                </div>
+                
+                <h4>⚡ İnteraktif Özellikler</h4>
+                <div class="info-item">
+                    ✅ <strong>Task Rows:</strong> Tıkla → Checkbox toggle (Spring animation)
+                </div>
+                <div class="info-item">
+                    ✅ <strong>Glass Cards:</strong> Tap → Yönlendirme (Dersler/SOS)
+                </div>
+                <div class="info-item">
+                    ✅ <strong>Video Carousel:</strong> Swipe + 4 saniye auto-scroll
+                </div>
+                <div class="info-item">
+                    ✅ <strong>Tab Bar:</strong> Navigasyon (6 tab)
+                </div>
+                
+                <div style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 10px; text-align: center;">
+                    <h4 style="color: white; margin-bottom: 10px;">💡 Kullanım İpucu</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">
+                        Bu sayfada elementlerin üzerine gel veya tıkla! Task row'lara tıklayarak checkbox'ları toggle edebilirsin. 
+                        Glass card'lara tıklayarak etkileşimi test edebilirsin. Video carousel otomatik olarak değişiyor!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Video carousel auto-rotation
+        let currentVideoIndex = 0;
+        const videoCards = document.querySelectorAll('.video-card');
+        const dots = document.querySelectorAll('.video-dots .dot');
+        const totalVideos = 6; // We have 6 videos but only showing 3 cards
+        
+        function rotateVideos() {
+            videoCards[currentVideoIndex].classList.remove('active');
+            dots[currentVideoIndex].classList.remove('active');
+            
+            currentVideoIndex = (currentVideoIndex + 1) % videoCards.length;
+            
+            videoCards[currentVideoIndex].classList.add('active');
+            dots[currentVideoIndex].classList.add('active');
+        }
+        
+        setInterval(rotateVideos, 4000);
+        
+        // Tab switching
+        document.querySelectorAll('.tab-item').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Add hover effects
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
+
+

@@ -3,25 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		01140F00FC8566F5CF1B2B73 /* Location_PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82329CC482807B7C42E35528 /* Location_PickerView.swift */; };
 		0331E1DB808CB25C78363F58 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C23B9DBF7A3776F2910A53 /* HomeView.swift */; };
-		03813C6345512C6980B0459E /* Lessons_DownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420ABB84224AE2BDD8EC1674 /* Lessons_DownloadsView.swift */; };
 		085090371FE025DAAC69C23C /* LuggmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098CC76211296654CCDC3699 /* LuggmaApp.swift */; };
 		099B6A7F462F6E1172D51CDB /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6AD7AC26D5F2A346512598 /* Networking.swift */; };
 		0C620A261866A2AF0F2AA3F9 /* CoachCall_HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493BE8A6D218D24C8D03FAD6 /* CoachCall_HomeView.swift */; };
 		0D6454CFFD116E13D25E559D /* Shop_HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507CFD835587E1E6D0BF5BF5 /* Shop_HomeView.swift */; };
-		0ED31CA423B22D7E0C8D3A6C /* Lessons_ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D71B81F25C42AA0803E55B /* Lessons_ProgressView.swift */; };
 		12375C24A4A8BECC4A1B455C /* Story_PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B515446AFDE087EFADA980BE /* Story_PreviewView.swift */; };
+		12875F2B7F79B7CE7F07B6D3 /* DebugTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D59DC7C65D7076E1E0B9B3 /* DebugTag.swift */; };
 		15432C94D65EA42FBBD43391 /* Shop_OrderSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84349656E1C7ABB113802093 /* Shop_OrderSummaryView.swift */; };
 		1895D92198EFE2636FE0D601 /* Shop_OrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AD33967B2B71B9250C585B /* Shop_OrderHistoryView.swift */; };
+		19A33E67B96949D7A1D5E9A5 /* DebugConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4558B14A844888A3E5F104 /* DebugConnect.swift */; };
 		1AE24B759D480DA1F1D55717 /* Media_UploadProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A28FF8E5C77097D0AB5B3A /* Media_UploadProgressView.swift */; };
 		245B54FD03B210468CCF8297 /* CoachCall_CallNowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671F9F857A6AD4933962A324 /* CoachCall_CallNowView.swift */; };
 		2666E2E7BE1294B33FAAE63D /* Profile_HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A236835477F9B2A6AFCFE88 /* Profile_HomeView.swift */; };
 		29883BCEA4088C75DA7AA056 /* Premium_ManageSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FC9AAF87429FF2D85921A8 /* Premium_ManageSubscriptionView.swift */; };
+		2ADBABF13A95898E8BF8F80D /* DebugLayoutRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0E4C6F3EA83606F7AC45B /* DebugLayoutRecorder.swift */; };
 		2C667ED1649A688542214C99 /* SOS_DistractionCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D64DBE0E8AB0AB6E3FB1D1 /* SOS_DistractionCardsView.swift */; };
 		2CF39398F1EFAD22E8C6E40F /* Onboarding_BenefitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5570C3BFBE5AD84A7761ED7 /* Onboarding_BenefitsView.swift */; };
 		2DA78B1DA1BB3A0451BE1129 /* Story_EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441919B6E3D70A389D22A8CA /* Story_EditorView.swift */; };
@@ -33,14 +34,15 @@
 		403C7212B25F3402DE0BB794 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848B1A38CB6F5E2005DCFE09 /* AppTabView.swift */; };
 		410A0D6D3880FA7277120F68 /* SOS_ReframeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9B1A1E10B368572E4B6A1A /* SOS_ReframeView.swift */; };
 		468F76B4343C229C655E7171 /* Premium_PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E722046BEADB4173818ABDC /* Premium_PaywallView.swift */; };
-		47300A09C88AC7CDC36EC3AE /* Lessons_SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746AABBAF3E60516B0C01F5B /* Lessons_SearchView.swift */; };
 		49188BED010107F9CD689D81 /* Profile_NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F034EBCBC4C7C4B3F31B6B /* Profile_NotificationSettingsView.swift */; };
 		4A4F52E611CEF11DCBF01407 /* CoachCall_SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17794364914624E0636D1658 /* CoachCall_SummaryView.swift */; };
 		4B78D2AD4413CD76AAC3831F /* Onboarding_WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2AD0B3EDB311B1F3D7D3BA /* Onboarding_WelcomeView.swift */; };
+		4F76E7C8AFBA6C04F2B9B6BE /* LiveInspectorKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B54C4D93E229D02C6760B89 /* LiveInspectorKit.swift */; };
 		50EEFE2C674EB1258CD38F1E /* CoachCall_NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB0334F1A55DA94B336A5E0 /* CoachCall_NotesView.swift */; };
 		59B0CB0004956F030FD6BFF6 /* SOS_HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CE95289BBD999E198AA7B6 /* SOS_HomeView.swift */; };
 		5D4085ED064F4841FCF506FD /* AnimatedCheckmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9110E020A50EA2F9755A0693 /* AnimatedCheckmark.swift */; };
 		5D7E5B728AFAFE6EF871D6E1 /* Onboarding_ConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B7E578477271F9A776992 /* Onboarding_ConsentView.swift */; };
+		5F4C9BEBA3FEC0AF4B21D0DE /* InspectorCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9F2E7C59E4E08B9F77602 /* InspectorCore.swift */; };
 		62024A54D115B9864407F6CF /* SOS_CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94931978EEF4448B5F22495 /* SOS_CompleteView.swift */; };
 		668397CECB7F59F621DEF3A2 /* Profile_StreaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8F79DFC22250F55DD16464 /* Profile_StreaksView.swift */; };
 		67CE52F8C6E034E5BB6A96BE /* Analytics_ProgressChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16632B988374E9D0F5433DCC /* Analytics_ProgressChartsView.swift */; };
@@ -48,8 +50,8 @@
 		6C779BBB292526ACEC07D490 /* Shop_ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F97D48FD625F7663EB42C /* Shop_ProductDetailView.swift */; };
 		6E0B6144CFFBE428253C254B /* Analytics_WeeklySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECC6D4E0A088F4F7DA7CAE /* Analytics_WeeklySummaryView.swift */; };
 		75968C89453B2B0ACA4E2C66 /* Profile_BadgesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0730678DA3BB9CAD2CC23 /* Profile_BadgesView.swift */; };
+		77DA4D4C2EB34A620046C0BF /* LookinBootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DA4D4B2EB34A620046C0BF /* LookinBootstrap.m */; };
 		792427A18F0F243A5F6EB539 /* BreathingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205998893F6FB0CBD85CE28C /* BreathingCircle.swift */; };
-		7D60ECCDF6974F5AF9934402 /* Lessons_VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8F2ED40D10C4F91C56DC22 /* Lessons_VideoPlayerView.swift */; };
 		7F1B90397B7CAD04C58BF53E /* Community_ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC777B34B663C5828A1EB487 /* Community_ProfileView.swift */; };
 		811CC45936881246FFAA619D /* Onboarding_PlanReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EDB7E7BC2EC08B5B3E085 /* Onboarding_PlanReadyView.swift */; };
 		877285B9B11E17F43192C4F6 /* Shop_CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55409D08C20EE296F9164346 /* Shop_CheckoutView.swift */; };
@@ -61,7 +63,6 @@
 		A16B3EB5E92A77B9E31F926F /* Onboarding_SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3857FDF77DE52C7154806B96 /* Onboarding_SignInView.swift */; };
 		AC45B2264158260BFB5A4D4E /* Plan_TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D53B72644B0FEC5EBDA3047 /* Plan_TaskListView.swift */; };
 		AE647A1253CF07676042B9E3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F409FDB907E6B482A696D47F /* RootView.swift */; };
-		AEA023FDD4F86695EE57242D /* Lessons_SectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECACBC2B4B2A354C5174576 /* Lessons_SectionListView.swift */; };
 		B1030017F5CDBD49D40BBCD1 /* Settings_AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD68A15BE118D884C8578116 /* Settings_AppSettingsView.swift */; };
 		B9952C191BA905C866CA1069 /* Profile_LegalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C17C254275BE6548E0D0C /* Profile_LegalView.swift */; };
 		B9D553A5114CB6FEAECE67F2 /* Settings_DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18014EF55886BEF57E86D6AA /* Settings_DebugView.swift */; };
@@ -80,10 +81,9 @@
 		D48B647280999BB264AF563F /* SOS_BreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA0B39B7B37503A7ACC3EA0 /* SOS_BreathingView.swift */; };
 		D4AE08098288562F3ED5C6D9 /* SOS_BreathingPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69EC73AED0780AFF40C1512 /* SOS_BreathingPracticeView.swift */; };
 		DA4AD1DAC6E595B9ED3CC417 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0068FC9B279688FA01BB67 /* Environment.swift */; };
-		E2F6E96769B96EC7DF6200F9 /* Lessons_LessonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984E0F1FE29822DAD9ACD2BD /* Lessons_LessonDetailView.swift */; };
+		E459098507FDD9E85182F50B /* Pods_Luggma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A265CEE760A105CC72F95D /* Pods_Luggma.framework */; };
 		E674B9521D943642A50CB0FE /* Profile_PrivacySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD83DB9968C2E3576ED2A8B /* Profile_PrivacySettingsView.swift */; };
 		EA26FBB9E0FC5D3EC08A34C2 /* Community_SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FA8A926826A5FF0D641194 /* Community_SearchView.swift */; };
-		F3036C92B1100DA3B7086894 /* Lessons_QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686955058EEACFFE6D47D507 /* Lessons_QuizView.swift */; };
 		F3D171B99090AA6D81FA1DF6 /* Shop_CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070517093601152CD4228DBE /* Shop_CartView.swift */; };
 		F566DC415A5D9C2573C062D7 /* Community_CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691F2BF359BE74273AE9B0C4 /* Community_CommentsView.swift */; };
 		F9CE48F5A6ABB9F04361BF58 /* Story_ViewerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D8376399576DB05889689A /* Story_ViewerView.swift */; };
@@ -100,6 +100,7 @@
 		0AA0EB925AE42FE85C904B1F /* Community_PostComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_PostComposerView.swift; sourceTree = "<group>"; };
 		0CD6FB6AD249F58D63F1B290 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		0CF209DD6ADFEA830B67B6BD /* Profile_AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_AboutView.swift; sourceTree = "<group>"; };
+		10B0E4C6F3EA83606F7AC45B /* DebugLayoutRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLayoutRecorder.swift; sourceTree = "<group>"; };
 		118EDB7E7BC2EC08B5B3E085 /* Onboarding_PlanReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_PlanReadyView.swift; sourceTree = "<group>"; };
 		16632B988374E9D0F5433DCC /* Analytics_ProgressChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics_ProgressChartsView.swift; sourceTree = "<group>"; };
 		17794364914624E0636D1658 /* CoachCall_SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachCall_SummaryView.swift; sourceTree = "<group>"; };
@@ -110,13 +111,13 @@
 		226B2B2C85C8F51D547FB134 /* Analytics_DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics_DashboardView.swift; sourceTree = "<group>"; };
 		24B0730678DA3BB9CAD2CC23 /* Profile_BadgesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_BadgesView.swift; sourceTree = "<group>"; };
 		281E54167260CBE96B7E1F0E /* Plan_OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan_OverviewView.swift; sourceTree = "<group>"; };
+		2B54C4D93E229D02C6760B89 /* LiveInspectorKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveInspectorKit.swift; sourceTree = "<group>"; };
 		2E722046BEADB4173818ABDC /* Premium_PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Premium_PaywallView.swift; sourceTree = "<group>"; };
 		33FA8A926826A5FF0D641194 /* Community_SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_SearchView.swift; sourceTree = "<group>"; };
 		3613454E45BB7DF268AC870D /* Lessons_HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons_HomeView.swift; sourceTree = "<group>"; };
 		3857FDF77DE52C7154806B96 /* Onboarding_SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_SignInView.swift; sourceTree = "<group>"; };
 		3A6AD7AC26D5F2A346512598 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		3D8F2ED40D10C4F91C56DC22 /* Lessons_VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons_VideoPlayerView.swift; sourceTree = "<group>"; };
-		420ABB84224AE2BDD8EC1674 /* Lessons_DownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons_DownloadsView.swift; sourceTree = "<group>"; };
+		3B4558B14A844888A3E5F104 /* DebugConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugConnect.swift; sourceTree = "<group>"; };
 		441919B6E3D70A389D22A8CA /* Story_EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story_EditorView.swift; sourceTree = "<group>"; };
 		47C23B9DBF7A3776F2910A53 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		493BE8A6D218D24C8D03FAD6 /* CoachCall_HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachCall_HomeView.swift; sourceTree = "<group>"; };
@@ -127,38 +128,40 @@
 		50CE95289BBD999E198AA7B6 /* SOS_HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOS_HomeView.swift; sourceTree = "<group>"; };
 		529C1D6ECC012B628F5FCFEE /* Media_PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media_PickerView.swift; sourceTree = "<group>"; };
 		55409D08C20EE296F9164346 /* Shop_CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop_CheckoutView.swift; sourceTree = "<group>"; };
-		60D71B81F25C42AA0803E55B /* Lessons_ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons_ProgressView.swift; sourceTree = "<group>"; };
+		5DF9F2E7C59E4E08B9F77602 /* InspectorCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorCore.swift; sourceTree = "<group>"; };
 		61A28FF8E5C77097D0AB5B3A /* Media_UploadProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media_UploadProgressView.swift; sourceTree = "<group>"; };
 		671F9F857A6AD4933962A324 /* CoachCall_CallNowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachCall_CallNowView.swift; sourceTree = "<group>"; };
-		686955058EEACFFE6D47D507 /* Lessons_QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons_QuizView.swift; sourceTree = "<group>"; };
 		691F2BF359BE74273AE9B0C4 /* Community_CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_CommentsView.swift; sourceTree = "<group>"; };
 		6D53B72644B0FEC5EBDA3047 /* Plan_TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan_TaskListView.swift; sourceTree = "<group>"; };
-		746AABBAF3E60516B0C01F5B /* Lessons_SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons_SearchView.swift; sourceTree = "<group>"; };
 		74F034EBCBC4C7C4B3F31B6B /* Profile_NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile_NotificationSettingsView.swift; sourceTree = "<group>"; };
+		77DA4D4A2EB34A620046C0BF /* Luggma-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Luggma-Bridging-Header.h"; sourceTree = "<group>"; };
+		77DA4D4B2EB34A620046C0BF /* LookinBootstrap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LookinBootstrap.m; sourceTree = "<group>"; };
+		7A0654B549F976A37AF9BCC1 /* Pods-Luggma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luggma.release.xcconfig"; path = "Target Support Files/Pods-Luggma/Pods-Luggma.release.xcconfig"; sourceTree = "<group>"; };
 		7EA0B39B7B37503A7ACC3EA0 /* SOS_BreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOS_BreathingView.swift; sourceTree = "<group>"; };
+		7FF279CF812475276247E0C7 /* Pods-Luggma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luggma.debug.xcconfig"; path = "Target Support Files/Pods-Luggma/Pods-Luggma.debug.xcconfig"; sourceTree = "<group>"; };
 		82329CC482807B7C42E35528 /* Location_PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location_PickerView.swift; sourceTree = "<group>"; };
 		84349656E1C7ABB113802093 /* Shop_OrderSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop_OrderSummaryView.swift; sourceTree = "<group>"; };
 		848B1A38CB6F5E2005DCFE09 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		86076E802CD63978BD3943FF /* Location_PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location_PermissionView.swift; sourceTree = "<group>"; };
 		8864535D9260BF391829EEA6 /* Community_FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_FeedView.swift; sourceTree = "<group>"; };
+		88D59DC7C65D7076E1E0B9B3 /* DebugTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugTag.swift; sourceTree = "<group>"; };
 		89AEB756863CC8437E689A0D /* Premium_BenefitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Premium_BenefitsView.swift; sourceTree = "<group>"; };
 		8C40C062D35CE730815B99F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8ECACBC2B4B2A354C5174576 /* Lessons_SectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons_SectionListView.swift; sourceTree = "<group>"; };
 		9110E020A50EA2F9755A0693 /* AnimatedCheckmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedCheckmark.swift; sourceTree = "<group>"; };
 		91147A155DC2D8EACD9C7929 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		984E0F1FE29822DAD9ACD2BD /* Lessons_LessonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lessons_LessonDetailView.swift; sourceTree = "<group>"; };
 		9EB0334F1A55DA94B336A5E0 /* CoachCall_NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachCall_NotesView.swift; sourceTree = "<group>"; };
 		A09A5CF46520E74E7E7578F7 /* Plan_ReminderSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan_ReminderSettingsView.swift; sourceTree = "<group>"; };
 		A3FC9AAF87429FF2D85921A8 /* Premium_ManageSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Premium_ManageSubscriptionView.swift; sourceTree = "<group>"; };
 		AA2AD0B3EDB311B1F3D7D3BA /* Onboarding_WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding_WelcomeView.swift; sourceTree = "<group>"; };
 		AD68A15BE118D884C8578116 /* Settings_AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings_AppSettingsView.swift; sourceTree = "<group>"; };
 		AF440BD21C297D2841733D0B /* Community_ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_ReportView.swift; sourceTree = "<group>"; };
-		B4A8EFE44C26134AFE7FA49F /* Luggma.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Luggma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A8EFE44C26134AFE7FA49F /* Luggma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luggma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B515446AFDE087EFADA980BE /* Story_PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story_PreviewView.swift; sourceTree = "<group>"; };
 		B5D64DBE0E8AB0AB6E3FB1D1 /* SOS_DistractionCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOS_DistractionCardsView.swift; sourceTree = "<group>"; };
 		B802F6FEB8B2FC49DD3B5779 /* Settings_ThemePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings_ThemePickerView.swift; sourceTree = "<group>"; };
 		BE0068FC9B279688FA01BB67 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		BF902E884E14EC7FE61BBD11 /* Shop_AddressBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop_AddressBookView.swift; sourceTree = "<group>"; };
+		C2A265CEE760A105CC72F95D /* Pods_Luggma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luggma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65F97D48FD625F7663EB42C /* Shop_ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop_ProductDetailView.swift; sourceTree = "<group>"; };
 		C69EC73AED0780AFF40C1512 /* SOS_BreathingPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOS_BreathingPracticeView.swift; sourceTree = "<group>"; };
 		CAECC6D4E0A088F4F7DA7CAE /* Analytics_WeeklySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics_WeeklySummaryView.swift; sourceTree = "<group>"; };
@@ -177,6 +180,17 @@
 		F68FB915608A0E480D87E0CB /* Story_ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story_ArchiveView.swift; sourceTree = "<group>"; };
 		F94931978EEF4448B5F22495 /* SOS_CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOS_CompleteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		543DD1044953A0CD6F9F336F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E459098507FDD9E85182F50B /* Pods_Luggma.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		1D42E65C16053EC14C54232A /* Components */ = {
@@ -210,6 +224,8 @@
 			children = (
 				A9F6D64EEDF449CA08F2D158 /* LuggmaApp */,
 				94890B8122A4FD6F60FF8AD4 /* Products */,
+				3CEFAEAB9C926EBDB76FFA24 /* Pods */,
+				E38D478119BCEB86106505B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,17 +241,19 @@
 			path = CoachCall;
 			sourceTree = "<group>";
 		};
+		3CEFAEAB9C926EBDB76FFA24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FF279CF812475276247E0C7 /* Pods-Luggma.debug.xcconfig */,
+				7A0654B549F976A37AF9BCC1 /* Pods-Luggma.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		44F868F47F35100648F72F03 /* Lessons */ = {
 			isa = PBXGroup;
 			children = (
-				420ABB84224AE2BDD8EC1674 /* Lessons_DownloadsView.swift */,
 				3613454E45BB7DF268AC870D /* Lessons_HomeView.swift */,
-				984E0F1FE29822DAD9ACD2BD /* Lessons_LessonDetailView.swift */,
-				60D71B81F25C42AA0803E55B /* Lessons_ProgressView.swift */,
-				686955058EEACFFE6D47D507 /* Lessons_QuizView.swift */,
-				746AABBAF3E60516B0C01F5B /* Lessons_SearchView.swift */,
-				8ECACBC2B4B2A354C5174576 /* Lessons_SectionListView.swift */,
-				3D8F2ED40D10C4F91C56DC22 /* Lessons_VideoPlayerView.swift */,
 			);
 			path = Lessons;
 			sourceTree = "<group>";
@@ -359,11 +377,13 @@
 				47C23B9DBF7A3776F2910A53 /* HomeView.swift */,
 				8C40C062D35CE730815B99F8 /* Info.plist */,
 				098CC76211296654CCDC3699 /* LuggmaApp.swift */,
+				77DA4D4B2EB34A620046C0BF /* LookinBootstrap.m */,
 				F409FDB907E6B482A696D47F /* RootView.swift */,
 				1D42E65C16053EC14C54232A /* Components */,
 				CEE2B8B7BB8E2518B3829D42 /* Core */,
 				FA49251E81AF2DABBF906A89 /* DesignSystem */,
 				A706DBE826879AEBA5E20348 /* Features */,
+				77DA4D4A2EB34A620046C0BF /* Luggma-Bridging-Header.h */,
 			);
 			path = LuggmaApp;
 			sourceTree = "<group>";
@@ -387,6 +407,14 @@
 				D6D8376399576DB05889689A /* Story_ViewerView.swift */,
 			);
 			path = Stories;
+			sourceTree = "<group>";
+		};
+		E38D478119BCEB86106505B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2A265CEE760A105CC72F95D /* Pods_Luggma.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E57936B7DFC992E7774C5FAE /* Location */ = {
@@ -424,6 +452,11 @@
 		FA49251E81AF2DABBF906A89 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				2B54C4D93E229D02C6760B89 /* LiveInspectorKit.swift */,
+				5DF9F2E7C59E4E08B9F77602 /* InspectorCore.swift */,
+				10B0E4C6F3EA83606F7AC45B /* DebugLayoutRecorder.swift */,
+				3B4558B14A844888A3E5F104 /* DebugConnect.swift */,
+				88D59DC7C65D7076E1E0B9B3 /* DebugTag.swift */,
 				91147A155DC2D8EACD9C7929 /* Theme.swift */,
 			);
 			path = DesignSystem;
@@ -436,15 +469,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17435403648F986791766C40 /* Build configuration list for PBXNativeTarget "Luggma" */;
 			buildPhases = (
+				3EAF4CD8491C63C70437653E /* [CP] Check Pods Manifest.lock */,
 				A85B488D1F7A7B6A593A97EC /* Sources */,
+				543DD1044953A0CD6F9F336F /* Frameworks */,
+				DB2DA08C3BE677B3EA1C5139 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Luggma;
-			packageProductDependencies = (
-			);
 			productName = Luggma;
 			productReference = B4A8EFE44C26134AFE7FA49F /* Luggma.app */;
 			productType = "com.apple.product-type.application";
@@ -456,9 +490,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					007C2ED58317A716BA627D8B = {
+						LastSwiftMigration = 2600;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -473,7 +508,7 @@
 			);
 			mainGroup = 344A37157A987B534682979B;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
+			productRefGroup = 94890B8122A4FD6F60FF8AD4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -481,6 +516,48 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EAF4CD8491C63C70437653E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Luggma-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB2DA08C3BE677B3EA1C5139 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Luggma/Pods-Luggma-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Luggma/Pods-Luggma-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Luggma/Pods-Luggma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A85B488D1F7A7B6A593A97EC /* Sources */ = {
@@ -508,14 +585,7 @@
 				EA26FBB9E0FC5D3EC08A34C2 /* Community_SearchView.swift in Sources */,
 				DA4AD1DAC6E595B9ED3CC417 /* Environment.swift in Sources */,
 				0331E1DB808CB25C78363F58 /* HomeView.swift in Sources */,
-				03813C6345512C6980B0459E /* Lessons_DownloadsView.swift in Sources */,
 				C0A75646CA8731B30984FC7A /* Lessons_HomeView.swift in Sources */,
-				E2F6E96769B96EC7DF6200F9 /* Lessons_LessonDetailView.swift in Sources */,
-				0ED31CA423B22D7E0C8D3A6C /* Lessons_ProgressView.swift in Sources */,
-				F3036C92B1100DA3B7086894 /* Lessons_QuizView.swift in Sources */,
-				47300A09C88AC7CDC36EC3AE /* Lessons_SearchView.swift in Sources */,
-				AEA023FDD4F86695EE57242D /* Lessons_SectionListView.swift in Sources */,
-				7D60ECCDF6974F5AF9934402 /* Lessons_VideoPlayerView.swift in Sources */,
 				3EAC3FF124E3839622F511BF /* Location_PermissionView.swift in Sources */,
 				01140F00FC8566F5CF1B2B73 /* Location_PickerView.swift in Sources */,
 				085090371FE025DAAC69C23C /* LuggmaApp.swift in Sources */,
@@ -546,6 +616,7 @@
 				49188BED010107F9CD689D81 /* Profile_NotificationSettingsView.swift in Sources */,
 				E674B9521D943642A50CB0FE /* Profile_PrivacySettingsView.swift in Sources */,
 				668397CECB7F59F621DEF3A2 /* Profile_StreaksView.swift in Sources */,
+				77DA4D4C2EB34A620046C0BF /* LookinBootstrap.m in Sources */,
 				AE647A1253CF07676042B9E3 /* RootView.swift in Sources */,
 				D4AE08098288562F3ED5C6D9 /* SOS_BreathingPracticeView.swift in Sources */,
 				D48B647280999BB264AF563F /* SOS_BreathingView.swift in Sources */,
@@ -568,6 +639,11 @@
 				2DA78B1DA1BB3A0451BE1129 /* Story_EditorView.swift in Sources */,
 				12375C24A4A8BECC4A1B455C /* Story_PreviewView.swift in Sources */,
 				F9CE48F5A6ABB9F04361BF58 /* Story_ViewerView.swift in Sources */,
+				12875F2B7F79B7CE7F07B6D3 /* DebugTag.swift in Sources */,
+				19A33E67B96949D7A1D5E9A5 /* DebugConnect.swift in Sources */,
+				2ADBABF13A95898E8BF8F80D /* DebugLayoutRecorder.swift in Sources */,
+				5F4C9BEBA3FEC0AF4B21D0DE /* InspectorCore.swift in Sources */,
+				4F76E7C8AFBA6C04F2B9B6BE /* LiveInspectorKit.swift in Sources */,
 				C464DC401CD65AE0E302A617 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,6 +688,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -631,6 +708,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -639,10 +717,14 @@
 		};
 		A93AFA5D6CE06115BD2123F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF279CF812475276247E0C7 /* Pods-Luggma.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				COCOAPODS_DISABLE_SCRIPTS_PHASES_SANDBOX = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = LuggmaApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -651,6 +733,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luggma.app;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "LuggmaApp/Luggma-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -693,6 +777,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -705,6 +790,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
@@ -713,10 +799,14 @@
 		};
 		F414F2198822685101CE88E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A0654B549F976A37AF9BCC1 /* Pods-Luggma.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				COCOAPODS_DISABLE_SCRIPTS_PHASES_SANDBOX = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = LuggmaApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -725,6 +815,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luggma.app;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "LuggmaApp/Luggma-Bridging-Header.h";
 				SWIFT_VERSION = 5.9;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
